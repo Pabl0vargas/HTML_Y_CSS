@@ -1,0 +1,105 @@
+<!--JUAN PABLO VARGAS BETANCUR-->
+<!--CLAN:Linus-->
+<!--EJERCICIO_SEMANA_1_MODULO_2-->
+<!--Basic structure HTML-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <meta name="'description" content="Personal portfolio of [Juan Pablo Vargas Betancur] as a Riwi Developer.">
+</head>
+<body>
+    <!--Main title of the page-->
+    <h1>Juan Pablo Vargas - Riwi Developer</h1>
+    <!--Navigation menu-->
+    <nav>
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>    
+    </nav>
+    <!--Presentation section-->
+    <section id="about-me">
+        <h2 class="about">About Me</h2>
+        <p>Hello, I am Juan Pablo Vargas.</p>
+        <p>I’m passionate about technology and software development.</p>
+        <p>I’m an electronic technologist and currently enjoying learning various programming languages.</p>
+        <h3 class="details">Details about me</h3>
+        <p>I’m also passionate about video games and traveling, especially exploring different places in Colombia.</p>
+        <!--Profile image-->
+        <img src="./ASSETS/IMAGES/IMAGE_ME.jpeg" alt="Juan Pablo Vargas's photo" width="200">
+
+    </section>
+    <!--List of technical skills-->
+    <h3>Technical skills</h3>
+    <ul>
+        <li>PLC'S</li>
+        <li>Arduino</li>
+        <li>Maquinas Electricas</li>
+        <li>Microcontroladores</li>
+        <li>Electronica</li>
+        <li>Python</li>
+        <li>HTML...(learning)</li>
+    </ul>
+    <hr>
+    <!--Projects section-->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><h3>Project 1: Automatic charger with charge display for scale batteries</h3></li>
+                <p>This project was carried out for a company that specializes in the maintenance and repair of scales, where the use of batteries for portable scales is very intensive. that's why the idea of creating this charger came up — to have more automated control over those batteries.</p>
+             <!--Representative image of a project-->    
+            <h4>6v Charger Diagram</h4>
+            <img src="./ASSETS/IMAGES/PROJECT_CHARGER_BATTERY.jpg" alt="Project portfolio image" width="500"> 
+        
+            <li><h3>Project 2: Automated parking control</h3></li>  
+                <p>Development of an automated control system for a parking lot at pascual bravo university</p> 
+        </ul>      
+    </section>
+    <!--Projects table-->
+    <table border="1">
+        <tr>
+            <th>Projects</th>
+            <th>Technologies Used</th>
+            <th>link</th>
+        </tr>
+        <tr>
+            <td>Project 1</td>
+            <td>PROTEUS 8</td>
+            <td><a href="./ASSETS/DOCS/PRACTICA_JPVB_CAB_BYB_2021 (1).pdf" target="_blank">Ver PDF</a></td>
+        </tr>
+         <tr>
+            <td>Project 2</td>
+            <td>Arduino</td>
+            <td><a href="./ASSETS/DOCS/Proyecto_VB_V6.pdf" target="_blank">Ver PDF</a></td>
+        </tr>
+    </table>
+    <!--Contact Form-->
+    <hr>
+    <section id="contact">
+        <!--With this method we send the information from the form to the destination we decide.-->
+        <!-- <form action="/send" method="post"> -->
+            <form>
+            <label for="Name">Name:</label><br />
+            <input type="text" name="Name" id="Name" placeholder="Name is" required><br />
+            
+            <label for="email">Email:</label><br />
+            <input type="email" name="email" id="email" placeholder="Email is?" required><br />
+
+
+            <label for="message">Message:</label><br />
+            <textarea name="message" id="message" rows="4" required></textarea><br />
+
+            <input type="submit" value="Send">
+        </form>
+        <!--Link to my social media(GitHub)-->
+        <h2>My social media</h2>
+        <ul>
+            <li><a href="https://github.com/Pabl0vargas?tab=repositories" target="_blank">GitHub</a></li>
+        </ul>    
+    </section>    
+</body>
+</html>
