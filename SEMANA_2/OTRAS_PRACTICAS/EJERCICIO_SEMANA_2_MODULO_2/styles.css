@@ -1,0 +1,148 @@
+div {
+  color: rgb(255, 0, 0);
+}
+
+h1,
+h2 {
+  color: #f0f0f0;
+}
+p {
+  color: #f0f0f0;
+}
+/* background color and centered page elements */
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin: 0;
+  flex-direction: column;
+}
+/* color, size and alignment of the boxes */
+.box {
+  position: relative;
+  color: white;
+  background-color: red;
+  border: 3px solid greenyellow;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+  width: 13ch;
+  height: 13ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1ch;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+/* bordered box for contents */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #12f155;
+  box-shadow: 0px 0px 15px #39ff14, 0px 0px 15px #39ff14 inset;
+  border-radius: 8px;
+}
+/* bordered box for visual effects*/
+.visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #12f1e6;
+  box-shadow: 0px 0px 15px #0fedf1, 0px 0px 15px #11eccf inset;
+  border-radius: 8px;
+}
+
+
+.visual .box {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.visual .box:hover {
+  transform: scale(1.1);
+  background-color: #0fedf1; 
+  box-shadow: 8px 8px 20px #0fedf1; 
+}
+
+
+.fixed-box {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  padding: 10px;
+}
+.rotate-box {
+  width: 100px;
+  height: 100px;
+  margin: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: yellow;
+  transform: rotate(45deg);
+  transition: 0.5s ease-in-out;
+}
+.rotate-box:hover {
+  transform: rotate(405deg);
+}
+a:hover {
+  color: orangered;
+  text-decoration: underline;
+  text-align: center;
+}
+/* "New!" in box */
+.box::before {
+  content: "New!";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  font-size: 0.65em;
+  padding: 1px 4px;
+  border-radius: 3px;
+  z-index: 2;
+  pointer-events: none;
+}
+.fade-in {
+  animation: fade 2s ease-in-out infinite;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+}
+.color1:hover {
+  background-color: rgb(255, 149, 0);
+}
+
+.color2:hover {
+  background-color: lightgreen;
+}
+
+.color3:hover {
+  background-color: lightskyblue;
+}

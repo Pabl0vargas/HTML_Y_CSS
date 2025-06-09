@@ -1,0 +1,254 @@
+/* size, background image and animation */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(0, 0, 0, 0.388), rgba(0, 0, 0, 0.388)),
+    url("./ASSETS/IMG/COMICS.jpg");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: auto;
+  animation: moverFondo 30s linear infinite;
+}
+
+@keyframes moverFondo {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1300px 0;
+  }
+}
+/* flexible structure with Flexbox */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header-image {
+  padding: 20px 20px;
+  max-width: 100%;
+  height: auto;
+  width: 600px;
+}
+/* navigation bar styles */
+/* flexible structure with Flexbox */
+nav {
+  display: flex;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  position: relative;
+  width: 80%;
+  justify-content: center;
+  top: 1rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+
+  color: #ffffff;
+  font-weight: 700;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: rgb(255, 0, 0);
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
+a:hover {
+  color: #ff3333;
+}
+
+main {
+  padding: 20px;
+}
+.Description {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Bangers", cursive;
+}
+.Description h1 {
+  font-size: 3rem;
+  color: #ff3333;
+  text-shadow: 5px 5px 6px rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+.Description p {
+  font-size: 1.8rem;
+  color: #cccccc;
+}
+/* .Marvel-cards  styles */
+/* responsive design with CSS Grid */
+.Marvel-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 150px;
+  padding: 80px 20px;
+  overflow: visible;
+  max-width: 1200px;
+  margin: 115px auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 250px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  perspective: 2500px;
+  padding: 0;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.iron,
+.thor,
+.cap,
+.hulk,
+.spiderman,
+.wolverine {
+  height: 390px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #000000, 0px 0px 15px #000000 inset;
+  display: block;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+/* Marvel-cards animations styles */
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+/* media queries for responsive page */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+footer {
+  text-align: center;
+  color: #ffffff;
+}
