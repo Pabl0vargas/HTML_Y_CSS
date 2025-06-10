@@ -60,9 +60,8 @@ We have a container with the presentation image, personal information and techni
 
 In the second HTML file called portfolio we have 3 projects completed with links to PDF.
 
- <!-- <main>
+    <main>
       <!-- Projects -->
-
       <h2>PROJECTS</h2>
       <section class="projects">
         <div class="project-card">
@@ -82,7 +81,7 @@ In the second HTML file called portfolio we have 3 projects completed with links
             this charger came up — to have more automated control over those
             batteries.
           </p>
-          <!--Representative image of a project-->
+          
 
           <a
             href="./ASSETS/DOCS/PRACTICA_JPVB_CAB_BYB_2021 (1).pdf"
@@ -107,9 +106,9 @@ In the second HTML file called portfolio we have 3 projects completed with links
         <div class="project-card">
           <h3>Project 3: led cube</h3>
           <img
-            class="image-automated-parking"
-            src="/ASSETS/IMAGES/led-cube-kit-for-arduino.png      "
-            alt="reference image automated parking system"
+            class="image-led-cube"
+            src="./ASSETS/IMAGES/led-cube-kit-for-arduino.png      "
+            alt="reference image led cube"
           />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -124,7 +123,7 @@ In the second HTML file called portfolio we have 3 projects completed with links
           >
         </div>
       </section>
-    </main> -->
+    </main>
 
 In the third HTML file called contact we have a form and a link to our personal repository
 
