@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Portfolio</title>
+    <meta
+      name="'description"
+      content="Personal portfolio of [Juan Pablo Vargas Betancur] as a Riwi Developer."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  
+    <!--Main title of the page-->
+    <h1>Juan Pablo Vargas - Riwi Developer</h1>
+    <!--Navigation menu-->
+    <nav>
+      <ul>
+        <li><a href="./index.html">About Me</a></li>
+        <li><a href="./portfolio.html">Portfolio</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main class="contact">
+      <h2>Contact</h2>
+      <!--With this method we send the information from the form to the destination we decide.-->
+      <!-- <form action="/send" method="post"> -->
+      <form>
+        <label for="Name">Name:</label><br />
+        <input
+          type="text"
+          name="Name"
+          id="Name"
+          placeholder="Name is"
+          required
+        /><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email is?"
+          required
+        /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea name="message" id="message" rows="4" required></textarea
+        ><br />
+
+        <input type="submit" value="Send" />
+      </form>
+      <!--Link to my social media(GitHub)-->
+      <h2>My social media</h2>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/Pabl0vargas?tab=repositories"
+            target="_blank"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </main>
+     <footer>
+      <p>&copy: 2025 Responsive Web Design</p>
+    </footer>
+  </body>
+</html>
